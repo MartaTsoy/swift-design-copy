@@ -7,6 +7,19 @@
         pastel;
 }
 
-body {
-    background-color: aqua;
+.btn {
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #3F979F;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #3F979F;
+    border: 1px solid #3F979F;
 }
