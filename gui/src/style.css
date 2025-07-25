@@ -5,7 +5,6 @@
 @plugin "daisyui/theme" {
   name: "banka";
   default: false;
-  color-scheme: light;
 
   --color-base-200: oklch(100% 0 0);
   --color-base-100: oklch(96% 0.007 247.896);
@@ -35,6 +34,8 @@
   --border: 1px;
   --depth: 0;
   --noise: 0;
+ --p-primary-200: oklch(0.6267 0.0839 203.49);
+  --p-button-outlined-primary-color: oklch(0.6267 0.0839 203.49);
 }
 
 @plugin "daisyui/theme" {
@@ -69,6 +70,8 @@
   --border: 1px;
   --depth: 0;
   --noise: 0;
+  --p-button-outlined-primary-border-color: #12284C;
+  --p-button-outlined-primary-color: #12284C;
 }
 
 :root {
@@ -81,13 +84,29 @@
     --menu-active-fg: var(--color-neutral);
 }
 
-  [data-theme="banka"] .btn-secondary {
+  [data-theme="banka"] {
+    .btn-secondary {
     border: 1px solid #3f979f;
   }
+.p-button-outlined {
+    color: #3f979f;
+    border: 1px solid #3f979f;
+}
+.p-datatable-filter-apply-button {
+    background-color: #3f979f;
+}
 
-  [data-theme="bankab"] .btn-secondary {
+.p-paginator-page.p-paginator-page-selected {
+    background-color: rgb(63 151 159 / 30%);
+    color: #3f979f;
+}
+}
+
+  [data-theme="bankb"] {
+    .btn-secondary {
     border: 1px solid #12284C;
   }
+}
 
 .btn {
     padding: 8px 24px;
@@ -97,4 +116,9 @@
 
 .label {
     margin-bottom: 10px;
+}
+
+button svg, .btn svg {
+    width: 1.5em;
+    height: 1.5em;
 }
