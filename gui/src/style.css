@@ -1,25 +1,25 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@plugin "daisyui" {
-    themes:
-        emerald --default,
-        dim,
-        pastel;
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "banka";
+  default: false;
+  color-scheme: light;
+
+  --color-primary: oklch(0.6267 0.0839 203.49);
 }
+
+@plugin "daisyui/theme" {
+  name: "bankb";
+  default: false;
+
+  --color-primary: oklch(0.2805 0.0722 259.75);     /* #12284C */
+}
+
 
 .btn {
     padding: 8px 24px;
     border-radius: 4px;
     border: none;
-}
-
-.btn-primary {
-    background-color: #3F979F;
-    color: #fff;
-}
-
-.btn-secondary {
-    background-color: #fff;
-    color: #3F979F;
-    border: 1px solid #3F979F;
 }
